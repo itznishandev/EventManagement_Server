@@ -1,5 +1,6 @@
+const path = require("path");
 const { MongoClient, ServerApiVersion } = require("mongodb");
-require("dotenv").config();
+require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
 const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB || "uddog_events";
@@ -59,3 +60,4 @@ module.exports = {
   connectDB,
   getCollections,
 };
+
