@@ -45,9 +45,3 @@ RESTful backend server powering **Uddog**, a community-driven social development
 | `GET` | `/api/my-events` | **JWT Protected** | Fetch all events created by the logged-in user |
 
 ---
-
-
-4. **Start the server:**
-   ```bash
-   npm run dev
-   ```
