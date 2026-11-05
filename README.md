@@ -8,7 +8,6 @@ RESTful backend server powering **Uddog**, a community-driven social development
 
 - **Live Server API (Vercel):** [https://event-management-server-xi.vercel.app/api](https://event-management-server-xi.vercel.app/api)
 - **Live Client Application (Vercel):** [https://uddog-event.vercel.app](https://uddog-event.vercel.app)
-- **Live Client Application (Netlify Backup):** [https://uddog-event.netlify.app](https://uddog-event.netlify.app)
 - **Client Repository:** [https://github.com/itznishandev/EventManagement_Client](https://github.com/itznishandev/EventManagement_Client)
 - **Server Repository:** [https://github.com/itznishandev/EventManagement_Server](https://github.com/itznishandev/EventManagement_Server)
 
@@ -47,24 +46,7 @@ RESTful backend server powering **Uddog**, a community-driven social development
 
 ---
 
-## Local Setup
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Configure environment variables (`.env`):**
-   ```env
-   PORT=5000
-   MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/uddog_events?retryWrites=true&w=majority
-   MONGODB_DB=uddog_events
-   JWT_SECRET=your_jwt_secret_key
-   CLIENT_URL=http://localhost:3000
-   ```
-3. **Seed initial upcoming events (optional, runs automatically on startup):**
-   ```bash
-   npm run seed
-   ```
 4. **Start the server:**
    ```bash
    npm run dev
