@@ -6,6 +6,7 @@ RESTful backend server powering **Uddog**, a community-driven social development
 
 ## Live Links & Repositories
 
+- **Live Website:** [https://uddog-event.netlify.app](https://uddog-event.netlify.app)
 - **Client Repository:** [https://github.com/itznishandev/EventManagement_Client](https://github.com/itznishandev/EventManagement_Client)
 - **Server Repository:** [https://github.com/itznishandev/EventManagement_Server](https://github.com/itznishandev/EventManagement_Server)
 

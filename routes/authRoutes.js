@@ -137,25 +137,7 @@ router.post("/auth/login", async (req, res, next) => {
     const normalizedEmail = email.toLowerCase().trim();
     const { usersCollection } = await getCollections();
 
-    let userDoc = await usersCollection.findOne({ email: normalizedEmail });
-
-    // Support demo coordinator account out-of-the-box for evaluator convenience
-    if (!userDoc && normalizedEmail === "coordinator@uddog.org" && password === "Uddog123") {
-      const demoHash = await bcrypt.hash("Uddog123", 10);
-      const demoDoc = {
-        name: "Tanvir Hasan",
-        displayName: "Tanvir Hasan",
-        email: "coordinator@uddog.org",
-        photoURL:
-          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&q=80",
-        passwordHash: demoHash,
-        provider: "credentials",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      const r = await usersCollection.insertOne(demoDoc);
-      userDoc = { ...demoDoc, _id: r.insertedId };
-    }
+    const userDoc = await usersCollection.findOne({ email: normalizedEmail });
 
     if (!userDoc || !userDoc.passwordHash) {
       return res.status(401).json({
