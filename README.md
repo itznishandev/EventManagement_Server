@@ -6,7 +6,9 @@ RESTful backend server powering **Uddog**, a community-driven social development
 
 ## Live Links & Repositories
 
-- **Live Website:** [https://uddog-event.netlify.app](https://uddog-event.netlify.app)
+- **Live Server API (Vercel):** [https://event-management-server-xi.vercel.app/api](https://event-management-server-xi.vercel.app/api)
+- **Live Client Application (Vercel):** [https://uddog-event.vercel.app](https://uddog-event.vercel.app)
+- **Live Client Application (Netlify Backup):** [https://uddog-event.netlify.app](https://uddog-event.netlify.app)
 - **Client Repository:** [https://github.com/itznishandev/EventManagement_Client](https://github.com/itznishandev/EventManagement_Client)
 - **Server Repository:** [https://github.com/itznishandev/EventManagement_Server](https://github.com/itznishandev/EventManagement_Server)
 
