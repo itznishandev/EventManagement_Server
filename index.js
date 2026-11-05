@@ -27,8 +27,8 @@ app.use(
 app.use(express.json({ limit: "2mb" }));
 app.use(cookieParser());
 
-// Root status endpoint
-app.get("/", (req, res) => {
+// Root & API status endpoint
+const statusHandler = (req, res) => {
   res.status(200).json({
     success: true,
     platform: "Uddog — Social Development Events Platform API",
@@ -46,12 +46,19 @@ app.get("/", (req, res) => {
       myEvents: "GET /api/my-events (JWT Protected)",
     },
   });
-});
+};
 
-// Mount API routes
+app.get("/", statusHandler);
+app.get("/api", statusHandler);
+
+// Mount API routes (support both /api prefixed and direct root paths)
 app.use("/api", authRoutes);
 app.use("/api", eventRoutes);
 app.use("/api", joinRoutes);
+
+app.use(authRoutes);
+app.use(eventRoutes);
+app.use(joinRoutes);
 
 // Error handling
 app.use(notFoundHandler);
